@@ -34,7 +34,7 @@ struct Ant
 	};
 
 	// Parameters
-	static constexpr float move_speed                = 40.0f;
+	static constexpr float move_speed                = 60.0f;
 	static constexpr float marker_detection_max_dist = 40.0f;
 	static constexpr float direction_update_period   = 0.25f;
 	static constexpr float marker_period             = 0.25f;

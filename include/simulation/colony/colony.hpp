@@ -30,7 +30,7 @@ struct Colony
 	Colony(float x, float y, uint32_t n)
 		: base(sf::Vector2f(x, y), 20.0f)
 		, max_ants_count(n)
-		, ants_creation_cooldown(0.125f)
+		, ants_creation_cooldown(0.75f)
 		, pop_diff_update(1.0f)
 		, pop_diff(60)
 		, id(0)
@@ -42,7 +42,7 @@ struct Colony
     {
         id = colony_id;
         base.food = 0.0f;
-        uint32_t ants_count = 1000;
+        uint32_t ants_count = 1500;
         for (uint32_t i(ants_count); i--;) {
             createWorker();
         }
@@ -74,7 +74,7 @@ struct Colony
 		ant.type                  = Ant::Type::Soldier;
 		ant.length                *= soldier_scale;
 		ant.width                 *= soldier_scale;
-		ant.damage                *= soldier_scale * 2.0f;
+		ant.damage                *= soldier_scale * 4.0f;
 		ant.max_autonomy          *= soldier_scale;
 	}
 
